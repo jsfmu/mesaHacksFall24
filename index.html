@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>     
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MESA U HACKS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+
+
+
+  <body>
+    <nav id="desktop-nav">      
+      <div class="logo">
+          <img
+            src="./assets/mesaLogo.png"
+            alt="Mesa Logo"
+            class="icon"
+            onclick="location.href='https://mesa.ucop.edu'"
+          />
+   </div>
+
+    <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#apply">Apply</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#team-section">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Welcome to MESA U Hacks</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#apply" onclick="toggleMenu()">Apply</a></li>
+          <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
+          <li><a href="#team-section" onclick="toggleMenu()">Team</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+
+   
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/drawing.png" alt="MESA U Hacks Logo" />
+      </div>
+    
+      <div class="section__text">
+        <h1 class="section__text__p1">APRIL 19-21</h1>
+        <div class="concept concept-two">
+          <div class="hover">
+            <h1>M</h1>
+          </div>
+          <div class="hover">
+            <h1>E</h1>
+          </div>
+          <div class="hover">
+            <h1>S</h1>
+          </div>
+          <div class="hover">
+            <h1>A</h1>
+          </div>
+          <div class="hover">
+            <h1>-</h1>
+          </div>
+          <div class="hover">
+            <h1>U</h1>
+          </div>
+        </div>
+        <h1 class="section__text__p2">CSU EAST BAY</h1>
+
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="scrollToApply()">
+            APPLY
+          </button>
+          <!-- JavaScript function to scroll to the contact section -->
+          <script>
+            function scrollToApply() {
+              // Get the element with the ID "apply"
+              var applySection = document.getElementById('apply');
+              // Check if the element exists
+              if (applySection) {
+                // Scroll to the "apply" section with a smooth behavior
+                applySection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }     
+          </script>
+        </div>
+    
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/mesa-u-hacks-50aaa92a6/'"
+          />
+    
+          <img
+            src="./assets/22.png"
+            alt="Instagram"
+            class="icon1"
+            onclick="location.href='https://www.instagram.com/mesa.u.hacks/'"
+          />
+        </div>
+      </div>
+    </section>
+    
+
+
+
+    <section id="about">
+      <div class="section-wrapper">
+        <div class="section-body">
+          <h3 class="title">Come Hack with Us</h3>
+          <div class="about-content-container">
+            <div class="left-content">
+              <p>A hackathon is where your crazy ideas become reality. 
+                Build something: an app, a website, a game, a Slackbot,
+                 <em>anything</em>. The possibilities are limitless.
+                  Do something you've never done before. Let's HACK!</p>
+              <h2>Location</h2>
+              <p>MESA U HACKS will take place at <a href="https://www.csueastbay.edu/about/visitor-information/hayward-campus-map.html">California State University East Bay</a>, in Hayward Campus. The address is: <a href="https://www.google.com/maps/place/California+State+University,+East+Bay/@37.6566086,-122.0571725,17z/data=!4m10!1m2!2m1!1scsueb+address!3m6!1s0x808f938a2a66cb0f:0x6e8f52a8e9002934!8m2!3d37.6560295!4d-122.0561984!15sCg1jc3VlYiBhZGRyZXNzIgJIAZIBEXB1YmxpY191bml2ZXJzaXR54AEA!16zL20vMDJrMHBu?entry=ttu">25800 Carlos Bee Blvd, Hayward, CA 94542</a></p>
+              <p>See you there</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-image">
+          <img src="./assets/mesau.png" alt="MESA-U group">
+        </div>
+      </div>
+      <div class="slant bottom left"></div>
+    </section>
+    
+
+
+
+    
+  <section id="apply" class="bounce-top">
+    <h1 class="title">APPLY HERE</h1>
+
+    <div class="title">
+      <div data-tf-live="01HJVFQQR8567C2KE4FPXSTC9F"></div>
+      <script src="https://embed.typeform.com/next/embed.js"></script> 
+    </div>
+
+    <div class="title">
+    <div data-tf-live="01HNGYM3XVKKMFC8WX1YT2V2TF"></div>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+  </div>
+
+  <img
+  src="./assets/arrow.png"
+  alt="Arrow icon"
+  class="icon arrow"
+  onclick="location.href='./#contact'"
+/>
+
+
+  </section>
+
+
+
+  <section id="schedule">
+    <p class="section__text__p1">Browse The</p>
+    <h1 class="title">Schedule</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/schedule.GIF"
+              alt="Project 1"
+              class="project-img"
+            />
+          </div>
+        </div>
+         
+  </section>
+
+
+
+
+
+<!-- Team Section -->
+<section class="container column" id="team-section">
+  <h1 class="title">Meet the Team</h1>
+  <!-- Individual Team Members -->
+  <div class="container row" id="project-container">
+
+  <!-- Monica Rico -->
+  <div class="each-project grads">
+    <img class="proj-img" src="assets/monica.jpg" alt="Shivi">
+    <div class="proj-description container column">
+      <div class="img-description">
+        <h2>
+          <a href="https://www.linkedin.com/in/mon-rico/" target="_blank" rel="noopener noreferrer">Monica Rico</a>
+        </h2>
+        <p>Computer Science Student</p>
+        <i>CSU East Bay</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Peter -->
+  <div class="each-project grads">
+    <img class="proj-img" src="assets/peter.jpg" alt="Shivi">
+    <div class="proj-description container column">
+      <div class="img-description">
+        <h2>
+          <a href="https://www.linkedin.com/in/petercrackthecode/" target="_blank" rel="noopener noreferrer">Peter Nguyen</a>
+        </h2>
+        <p>Computer Science Student</p>
+        <i>CSU East Bay</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shivi -->
+  <div class="each-project grads">
+    <img class="proj-img" src="assets/shivi.jpg" alt="Shivi">
+    <div class="proj-description container column">
+      <div class="img-description">
+        <h2>
+          <a href="https://www.linkedin./" target="_blank" rel="noopener noreferrer">Shivangi (Shivi) Manel</a>
+        </h2>
+        <p>Computer Science Student</p>
+        <i>Chabot College</i>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Dorian Kelly -->
+<div class="each-project grads">
+  <img class="proj-img" src="assets/dk.jpg" alt="Dorian Kelly">
+  <div class="proj-description container column">
+    <div class="img-description">
+      <h2>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Dorian Kelly</a>
+      </h2>
+      <p>Computer Science Student</p>
+      <i>Chabot College</i>
+    </div>
+  </div>
+</div>
+
+
+<!-- Alex Torres -->
+<div class="each-project grads">
+  <img class="proj-img" src="assets/alex.jpg" alt="Alex Torres">
+  <div class="proj-description container column">
+    <div class="img-description">
+      <h2>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Alex Torres</a>
+      </h2>
+      <p>Graduated from Wesleyan University</p>
+      <i>BA in Mathematics (and French Studies) </i>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Muhammad Jawwad -->
+    <div class="each-project grads">
+      <img class="proj-img" src="assets/muhammad.jpg" alt="Muhammad Jawwad">
+      <div class="proj-description container column">
+        <div class="img-description">
+          <h2>
+            <a href="https://www.linkedin.com/in/msjawwad/" target="_blank" rel="noopener noreferrer">Muhammad Jawwad</a>
+          </h2>
+          <p>Graduate Student at SJSU</p>
+          <i>BS Computer Science, MS Informatics</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Andrea Labra Orozco -->
+    <div class="each-project grads">
+      <img class="proj-img" src="assets/andrea.png" alt="Andrea Labra Orozco">
+      <div class="proj-description container column">
+        <div class="img-description">
+          <h2>
+            <a href="https://www.linkedin.com/in/andrealabrao/" target="_blank" rel="noopener noreferrer">Andrea Labra Orozco</a>
+          </h2>
+          <p>Graduate Student at CSUEB</p>
+          <i>BS Computer Science, MS Statistics Data Science</i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="contact">
+     
+      <h1 class="title">Contact Us</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email Icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mesa.u.hacks@gmail.com">EMAIL</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn Icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/ig.png"
+            alt="Instagram Icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.instagram.com/mesa.u.hacks/">Instagram</a></p>
+        </div>
+
+
+      </section>
+
+        <div class="section__pic1-container">
+          <img src="./assets/smallLogo.png" alt="MESA U Hacks Logo" />
+        </div>
+      </div>
+
+
+
+    <footer>
+      <!--<nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#apply">Apply</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#team-section">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>-->
+      <p>Made with ♡ & ☕︎ by MESA U HACKS Team </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+
+</html>
