@@ -725,6 +725,60 @@ footer p {
   clear: both;
 }
 
+#team-section {
+  margin-top: 50px; /* Adjust this value as needed */
+}
+
+
+/* Frequently Asked Questions */
+/* Base settings to ensure consistency */
+.faq {
+  font-family: 'Your Font Family', sans-serif; /* Update with your actual font family */
+  color: #333; /* Adjust based on your color scheme */
+}
+
+.faq .title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px; /* Adjust based on your design */
+  color: #444; /* Adjust based on your color scheme */
+}
+
+.faq-item {
+  background-color: #fff; /* Light background for contrast */
+  border: thin solid #ccc; /* Subtle border */
+  margin-bottom: 10px;
+  border-radius: 8px; /* Consistent rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.faq-question {
+  background-color: #eee; /* Slightly darker for the question */
+  color: #444;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px; /* Larger font for readability */
+  transition: background-color 0.4s ease, font-weight 0.3s ease; /* Smooth transition for hover and active states */
+  border-radius: 8px 8px 0 0; /* Rounded corners on top */
+}
+
+.faq-question:hover, .faq-question.active {
+  background-color: #ddd; /* Highlight on hover */
+  font-weight: bold; /* Make the question bold when active/hover */
+}
+
+.faq-answer {
+  padding: 20px 18px;
+  background-color: white;
+  display: none; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.4s ease-out; /* Smooth transition for accordion effect */
+  border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
+}
 
 /* sections */
 
