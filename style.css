@@ -516,19 +516,28 @@ h1 {
 
 /* Schedule SECTION */
 
-#projects {
-  position: relative;
+#schedule {
+  display : inline-block;
+  justify-content: center;
+  flex-direction: column;
+  height: 200vh;
+  padding : 5px;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  padding : 1px;
 }
 
+.experience-container{
+  margin : auto;
+}
 .project-img {
   border-radius: 1rem;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
+  padding : 5px;
 }
 
 .project-title {
