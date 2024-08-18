@@ -1,6 +1,7 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
   margin: 0;
@@ -741,52 +742,38 @@ footer p {
 
 /* Frequently Asked Questions */
 /* Base settings to ensure consistency */
-.faq {
-  font-family: 'Your Font Family', sans-serif; /* Update with your actual font family */
-  color: #333; /* Adjust based on your color scheme */
-}
 
-.faq .title {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px; /* Adjust based on your design */
-  color: #444; /* Adjust based on your color scheme */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .faq-item {
-  background-color: #fff; /* Light background for contrast */
-  border: thin solid #ccc; /* Subtle border */
-  margin-bottom: 10px;
-  border-radius: 8px; /* Consistent rounded corners */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .faq-question {
-  background-color: #eee; /* Slightly darker for the question */
-  color: #444;
-  cursor: pointer;
-  padding: 20px;
   width: 100%;
+  padding: 1rem;
+  background-color: #f7f7f7;
   border: none;
   text-align: left;
-  outline: none;
-  font-size: 20px; /* Larger font for readability */
-  transition: background-color 0.4s ease, font-weight 0.3s ease; /* Smooth transition for hover and active states */
-  border-radius: 8px 8px 0 0; /* Rounded corners on top */
-}
-
-.faq-question:hover, .faq-question.active {
-  background-color: #ddd; /* Highlight on hover */
-  font-weight: bold; /* Make the question bold when active/hover */
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: 'Poppins'; /* Apply flashy font */
+  font-weight: bold; /* Make the text bold */
+  background-color: #ffebcc; /* Highlight the text with a light orangish color */
+  
 }
 
 .faq-answer {
-  padding: 20px 18px;
-  background-color: white;
-  display: none; /* Hidden by default */
-  overflow: hidden;
-  transition: max-height 0.4s ease-out; /* Smooth transition for accordion effect */
-  border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
+  display: none;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }
 
 /* sections */
@@ -862,7 +849,26 @@ footer p {
   position: relative;
 }
 
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+}
 
+.container.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Vertically center the circles */
+  gap: 20px; /* Add horizontal space between the circles */
+}
 
-
-
+.each-project {
+  flex-grow: 1; /* Allow items to grow and fill the space */
+  flex-basis: calc(33.33% - 40px); /* Adjust the width to fit three items per row, accounting for the gap */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
+}
