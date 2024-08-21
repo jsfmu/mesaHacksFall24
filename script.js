@@ -56,30 +56,49 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("button-section");
-var btns = btnContainer.getElementsByClassName("filter-button");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    console.log(current);
-  });
-}
-
-// JavaScript code to handle the scroll event about 
-document.addEventListener("scroll", function () {
-  var aboutSection = document.getElementById("about");
-  var scrollPosition = window.scrollY;
-
-  // Adjust the threshold value based on your design
-  var threshold = 100;
-
-  // Check if the scroll position is below the threshold
-  if (scrollPosition > threshold) {
-    aboutSection.classList.add("fixed-about");
-  } else {
-    aboutSection.classList.remove("fixed-about");
+document.addEventListener('DOMContentLoaded', function() {
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("button-section");
+  if (btnContainer) {
+    var btns = btnContainer.getElementsByClassName("filter-button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+        console.log(current);
+      });
+    }
   }
+
+  // JavaScript code to handle the scroll event about 
+  document.addEventListener("scroll", function () {
+    var aboutSection = document.getElementById("about");
+    var scrollPosition = window.scrollY;
+
+    // Adjust the threshold value based on your design
+    var threshold = 100;
+
+    // Check if the scroll position is below the threshold
+    if (scrollPosition > threshold) {
+      aboutSection.classList.add("fixed-about");
+    } else {
+      aboutSection.classList.remove("fixed-about");
+    }
+  });
+
+  // FAQ section JavaScript
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+    });
+  });
 });
