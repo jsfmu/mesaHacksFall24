@@ -1,7 +1,6 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
   margin: 0;
@@ -15,15 +14,17 @@ body {
 font-family: "Poppins", sans-serif;
 background: linear-gradient(to right, 
   #1e579984 0%, 
-  #2ce0bf87 8%,   /* Adjusted color stop */
+  #2ce0bf87 12.5%,  /* Adjusted color stop */
   #76dd2c81 25%,   /* Adjusted color stop */
-  #dba62b8d 40%,   /* Adjusted color stop */
-  #e02cbf8f 60%,   /* Adjusted color stop */
-  #1e5799 75%,     /* Adjusted color stop */
-  #1e579984 100%   /* Repetition of the first color for smooth transition */
+  #dba62b8d 37.5%,  /* Adjusted color stop */
+  #e02cbf8f 50%,   /* Adjusted color stop */
+  #1e5799 62.5%,   /* Adjusted color stop */
+  #b2627a 75%,    /* Adjusted color stop */
+  #462f66aa 87.5%,   /* Adjusted color stop */
+  #1e579984 100%  /* Repetition of the first color for smooth transition */
 );
 background-size: 1000% 100%;
-animation: bg 20s linear infinite;
+animation: bg 30s linear infinite;
 }
 
 @keyframes bg {
@@ -68,6 +69,7 @@ nav {
   list-style: none;
   font-size: 1.5rem;
   font-family: 'Comic Sans MS', cursive, sans-serif;
+  align-items: right
 }
 
 a {
@@ -194,6 +196,88 @@ section#apply {
 }
 
 /* PROFILE SECTION */
+
+
+/* Ensure Full Centering in Mobile View */
+@media (max-width: 991.98px) {
+  #profile .row {
+    text-align: center;
+  }
+
+  .section__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .concept {
+    justify-content: center;
+  }
+}
+
+/* Profile Section Image and Text Container */
+.section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Ensure the image container doesn't exceed the column width */
+  height: auto;
+  margin: 0 auto; /* Center the image on mobile view */
+}
+
+.section__pic-container img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 0.75rem rgba(100, 94, 97, 0.58));
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* Profile Section Image and Text Container */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: auto; /* Adjust to auto to fit content */
+  margin-bottom: 6rem; /* Adds space to prevent overlapping */
+}
+
+.section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Ensure the image container doesn't exceed the column width */
+  height: auto;
+}
+
+.section__pic-container img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 0.75rem rgba(100, 94, 97, 0.58));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Adjusting Text Section to Fit Next to Image */
+.section__text {
+  align-self: center;
+  text-align: center;
+  padding: 1rem; /* Adjust padding to prevent overlap */
+}
+
+@media (min-width: 992px) {
+  #profile {
+    height: 80vh; /* Maintain height for larger screens */
+    margin-bottom: 0;
+  }
+
+  .section__pic-container {
+    width: 100%; /* Adjust container width to prevent overflow */
+  }
+
+  .section__text {
+    padding-left: 2rem; /* Add left padding to create space between image and text */
+  }
+}
+
 
 #profile {
   display: flex;
@@ -515,40 +599,110 @@ h1 {
 
 
 
-/* Schedule SECTION */
+/* General Spacing */
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
+/* Schedule Section */
 #schedule {
-  display : inline-block;
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 200vh;
-  padding : 5px;
+  margin-bottom: 50px; /* Add margin to create space between sections */
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-  padding : 1px;
+  padding: 10px; /* Increase padding for better spacing */
 }
 
-.experience-container{
-  margin : auto;
-}
 .project-img {
   border-radius: 1rem;
-  width: 90%;
-  height: 90%;
-  padding : 5px;
+  width: 100%; /* Ensure the image takes up full width */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+/* Meet the Team Section */
+#team-section {
+  margin-top: 50px; /* Add more margin to ensure separation from the above section */
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+#project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Ensure there's space between the cards */
+}
+
+.each-project {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  margin: 20px; /* Ensure enough space between the cards */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.proj-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.proj-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #F8F8F8;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: opacity .4s, visibility .4s;
+}
+
+.each-project:hover .proj-description {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.img-description {
+  transition: .5s;
+  color: #575757;
+  text-align: center;
+  padding: 10px; /* Add padding to prevent text from touching the edges */
+}
+
+#project-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Additional Styles to Ensure Proper Spacing */
+@media (max-width: 768px) {
+  #schedule {
+    margin-bottom: 100px; /* Increase margin for smaller screens */
+  }
+
+  #team-section {
+    margin-top: 100px; /* Ensure adequate spacing on mobile devices */
+  }
+
+  .each-project {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 
@@ -735,46 +889,6 @@ footer p {
   clear: both;
 }
 
-#team-section {
-  margin-top: 50px; /* Adjust this value as needed */
-}
-
-
-/* Frequently Asked Questions */
-/* Base settings to ensure consistency */
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 1rem;
-  background-color: #f7f7f7;
-  border: none;
-  text-align: left;
-  font-size: 1.2rem;
-  cursor: pointer;
-  font-family: 'Poppins'; /* Apply flashy font */
-  font-weight: bold; /* Make the text bold */
-  background-color: #ffebcc; /* Highlight the text with a light orangish color */
-  
-}
-
-.faq-answer {
-  display: none;
-  padding: 1rem;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
 
 /* sections */
 
@@ -849,26 +963,220 @@ footer p {
   position: relative;
 }
 
-.center-content {
+.navbar-header {
+  background:transparent;
+}
+
+.span-img {
+  height: 100%;
+
+  /* optional for right align */
+  display: flex; 
+  justify-content: flex-end;
+
+}
+
+.img-fluid {
+  max-height: 100%;
+}
+
+
+
+/*Added stuff*/
+/* Prevent Horizontal Scrolling */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Profile Section Image and Text Container */
+.section__pic-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  align-items: center;
+  width: 100%; /* Use full container width */
+  height: auto; /* Ensure height scales with width */
+  margin: 0 auto;
+}
+
+.section__pic-image {
+  width: auto; /* Let width scale naturally */
+  height: auto; /* Ensure natural height */
+  max-width: 100%; /* Ensure it does not exceed container width */
+  max-height: 600px; /* Optional: Constrain height to avoid overflow */
+  filter: drop-shadow(0 0 0.75rem rgba(100, 94, 97, 0.58));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Ensure Full Centering in Mobile View */
+@media (max-width: 991.98px) {
+  #profile .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .concept {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .section__pic-container {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Prevent Horizontal Scrolling */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top: 0; /* Reset any padding that may be affecting layout */
+}
+
+/* Transparent Navbar */
+.navbar-transparent {
+  background-color: transparent !important;
+  border: none; /* Remove any borders */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  position: relative; /* Position it relative to the rest of the page */
+}
+
+/* Make sure the navbar is always on top and does not overlap content */
+header {
+  z-index: 1000;
+  position: relative;
+}
+
+/* Ensure the profile section starts below the navbar */
+#profile {
+  margin-top: 100px; /* Adjust the value based on the height of your navbar */
+}
+
+/* Profile Section Image and Text Container */
+.section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.section__pic-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  filter: drop-shadow(0 0 0.75rem rgba(100, 94, 97, 0.58));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Ensure Full Centering in Mobile View */
+@media (max-width: 991.98px) {
+  #profile .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section__text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .concept {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .section__pic-container {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* Adjust the profile margin for mobile view */
+  #profile {
+    margin-top: 50px; /* Smaller margin for mobile view */
+  }
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* General styles to prevent horizontal scrolling */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Profile Section */
+#profile {
+  margin-top: 40px;
+  transition: margin-top 0.3s ease; /* Smooth transition when moving up or down */
+}
+
+/* Ensure text alignment and layout */
+.section__text {
   text-align: center;
 }
 
-.container.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Distribute space evenly */
-  align-items: center; /* Vertically center the circles */
-  gap: 20px; /* Add horizontal space between the circles */
+/* Specific styles for SEPTEMBER 13-15 */
+.section__text__p1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0; /* Remove default margins */
+  font-size: 1.5rem; /* Adjust font size for mobile */
 }
 
-.each-project {
-  flex-grow: 1; /* Allow items to grow and fill the space */
-  flex-basis: calc(33.33% - 40px); /* Adjust the width to fit three items per row, accounting for the gap */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  margin: 20px 10px; /* Add vertical and horizontal margin to create space between items */
+.concept-two {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 991.98px) {
+  /* Ensure text blocks are centered and full-width */
+  .section__text__p1 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /* Center the text */
+    font-size: 1.5rem; /* Ensure it scales correctly on mobile */
+  }
+
+  .section__text__p2,
+  .concept-two {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; /* Center these elements */
+    display: block;
+  }
+
+  .concept-two {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Add spacing between text blocks */
+  }
+
+  .hover {
+    display: inline-block; /* Keep letters on the same line */
+    margin: 0 5px;
+  }
 }
